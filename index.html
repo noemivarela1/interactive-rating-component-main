@@ -13,14 +13,7 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
+    
   </style>
   <script>
     function change(id){
@@ -33,10 +26,15 @@
         console.log(radios[i]);
         if (radios[i]==radio){
           label.style.backgroundColor="hsl(217, 12%, 63%)";
+          label.style.color="hsl(0, 0%, 100%)";
+          var select=document.getElementById("select");
+          select.textContent=i+1;
         }else{
           labels[i].style.backgroundColor="hsl(216, 12%, 20%)";
         }
       }
+      var btn=document.getElementById("submit");
+      btn.disabled=false;
     }
     function changeArticle(){
       event.preventDefault();
@@ -44,16 +42,10 @@
       var article1=document.getElementById("rating");
       var article2=document.getElementById("thanking");
       
-      article2.style.display="unset";
+      article2.style.display="flex";
       article1.style.display="none";
       console.log(article1);
     }
-    /*function hideArticle(){
-      alert("entra en hideArticle");
-      var article2=document.getElementById("thanking");
-      console.log(article2);
-      article2.style.display="none";
-    }*/
   </script>
 </head>
 
@@ -66,7 +58,7 @@
         <img src="images/icon-star.svg" id="star" alt="star">
       </figure>
       <h1>How did we do?</h1>
-      <form action="">
+      <form action="" onsubmit="changeArticle(event)">
         <p>Please let us know how we did with your support request. All feedback is appreciated
           to help us improve our offering!
         </p>
@@ -78,30 +70,32 @@
           <input type="radio" class="radiorate" name="rate" id="five" onchange="change('five')" value="five"><label for="five" class="rate" id="five1">5</label>
         </section>
 
-        <button id="submit" onclick="changeArticle(event)">Submit</button>
+        <button id="submit" disabled>Submit</button>
       </form>
     </article>
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
     <article id="thanking">
-      <img src="images/illustration-thank-you.svg" alt="illustration thank you">
-      <p>You selected
-    <!-- Add rating here -->
-    out of 5</p>
+      <figure id="thanksyou">
+      <img src="images/illustration-thank-you.svg" alt="illustration thank you" id="thanks">
+      <figcaption id="selection">You selected <span id="select"></span>
+      <!-- Add rating here -->
+      out of 5</figcaption>
+      </figure>
+      <h1>Thank you!</h1>
 
-      <p>Thank you!</p>
-
-      <p>We appreciate you taking the time to give a rating. If you ever need more support,
+      <p id="help">We appreciate you taking the time to give a rating.<br>
+      If you ever need more support,
       don’t hesitate to get in touch!</p>
     </article>
     <!-- Thank you state end -->
   </main>
-  <!--
+  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Noemí Varela</a>.
-  </div>-->
+  </div>
 </body>
 
 </html>

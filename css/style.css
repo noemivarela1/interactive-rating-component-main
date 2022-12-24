@@ -6,6 +6,7 @@ body{
     height:100%;
     background-color:hsl(216, 12%, 8%);
     display:flex;
+    flex-direction:column;
     justify-content: center;
     align-items: center;
     font-family:'Overpass';
@@ -13,8 +14,7 @@ body{
 }
 h1{
     color:hsl(0, 0%, 100%);
-    margin-top:1.2em;
-    margin-bottom:0.7em;
+    margin:0px;
     letter-spacing:0.1em;
 }
 main{
@@ -24,6 +24,7 @@ main{
     border-radius:20px;
     display:flex;
     justify-content:center;
+    align-items:center;
 }
 figure,.rate{
     height:50px;
@@ -49,15 +50,13 @@ figure,.rate{
     padding:1em;
     font-weight:700;
     letter-spacing:0.1em;
+    
 }
 #submit:hover{
     background-color:hsl(0, 0%, 100%);
     color:hsl(25, 97%, 53%);
 }
 
-#thanking{
-    display:none;
-}
 
 p{
     color: hsl(216, 12%, 54%);
@@ -71,6 +70,7 @@ p{
 }
 .rate:hover{
     background-color:hsl(25, 97%, 53%);
+    color:hsl(0, 0%, 100%);
 }
 section{
     display:flex;
@@ -86,7 +86,43 @@ input[type="radio"]{
     display:none;
 }
 #thanking{
+    display:none;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+}
+#thanks{
+    width:200px;
+}
+#selection{
+    color:hsl(25, 97%, 53%);
+    border-radius:20px;
+    padding:0.5em;
+    background-color:hsl(217, 12%, 20%);
+    text-align:center;
+    margin:1.5em;
+}
+#help{
+    text-align: center;
+}
+
+#thanksyou{
     display:flex;
     flex-direction:column;
     justify-content:center;
+    align-items:center;
+    margin:0px;
+    width:100%;
+    height:100%;
+    background-color:transparent;
 }
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin:2em;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
