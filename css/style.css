@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+html{
+    height:100%;
+}
+body{
+    height:100%;
+    background-color:hsl(216, 12%, 8%);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Overpass';
+    
+}
+h1{
+    color:hsl(0, 0%, 100%);
+    margin-top:1.2em;
+    margin-bottom:0.7em;
+    letter-spacing:0.1em;
+}
+main{
+    width:410px;
+    height:410px;
+    background-color:hsl(213, 19%, 18%);
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+}
+figure,.rate{
+    height:50px;
+    width:50px;
+    border-radius:50%;
+    background-color: hsl(217, 12%, 20%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0px;
+}
+#star{
+    height:18px;
+    width:18px;
+}
+#submit{
+    background-color:hsl(25, 97%, 53%);
+    border:0px;
+    text-transform:uppercase;
+    color:hsl(0, 0%, 100%);
+    width:100%;
+    border-radius:20px;
+    padding:1em;
+    font-weight:700;
+    letter-spacing:0.1em;
+}
+#submit:hover{
+    background-color:hsl(0, 0%, 100%);
+    color:hsl(25, 97%, 53%);
+}
+
+#thanking{
+    display:none;
+}
+
+p{
+    color: hsl(216, 12%, 54%);
+    font-size:15px;
+    line-height:1.5em;
+}
+.rate{
+    font-weight:700;
+    border:none;
+    color:  hsl(216, 12%, 54%);
+}
+.rate:hover{
+    background-color:hsl(25, 97%, 53%);
+}
+section{
+    display:flex;
+    justify-content:space-between;
+    margin-top:2em;
+    margin-bottom:2em;
+}
+article{
+    margin:30px;
+    width:100%;
+}
+input[type="radio"]{
+    display:none;
+}
+#thanking{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
