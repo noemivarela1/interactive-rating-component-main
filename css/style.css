@@ -17,6 +17,9 @@ h1{
     margin:0px;
     letter-spacing:0.1em;
 }
+#question{
+    margin-top:1em;
+}
 @media only screen and (max-width:449px){
     main{
         width:350px;
@@ -39,7 +42,7 @@ h1{
         align-items:center;
     }
 }
-figure,.rate{
+#figure,.rate{
     height:50px;
     width:50px;
     border-radius:50%;
@@ -85,11 +88,12 @@ p{
     background-color:hsl(25, 97%, 53%);
     color:hsl(0, 0%, 100%);
 }
-section{
+fieldset{
     display:flex;
     justify-content:space-between;
     margin-top:2em;
     margin-bottom:2em;
+    border:none;
 }
 article{
     margin:30px;
@@ -138,4 +142,7 @@ input[type="radio"]{
 
   .attribution a {
     color: hsl(228, 45%, 44%);
+  }
+  legend{
+    display:none;
   }
